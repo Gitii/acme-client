@@ -1,0 +1,35 @@
+{
+    "name": "@gitii/acme-client-bot",
+    "version": "0.5.0",
+    "description": "Dockerized cron job that creates and renews certificate using let's encrypt and minio as storage.",
+    "license": "MIT",
+    "private": false,
+    "repository": "https://github.com/Gitii/tls-bot",
+    "author": "Gitii",
+    "bin": {
+        "tls-bot": "./bin/run.sh"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "lint": "yarn eslint",
+        "test": "yarn jest"
+    },
+    "dependencies": {
+        "@gitii/acme-client": "^0.5.0",
+        "@gitii/acme-dns-01-hetzner": "^0.5.0",
+        "@gitii/acme-storage-minio": "^0.5.0",
+        "@types/node": "^14.17.29",
+        "commander": "^8.3.0",
+        "lodash": "^4.17.21",
+        "source-map-support": "^0.5.20"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.16.0",
+        "@babel/preset-env": "^7.16.0",
+        "@babel/preset-typescript": "^7.16.0",
+        "babel-jest": "^27.3.1",
+        "eslint": "^8.1.0",
+        "ts-loader": "^9.2.6"
+    }
+}

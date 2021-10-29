@@ -1,0 +1,31 @@
+version: "3.7"
+services:
+  minio:
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+      - "9090:9090"
+    command: server /data --console-address ":9090" --address ":9000"
+  bot:
+    image: gitii-acme-client:latest
+    environment:
+      MAINTAINER_EMAIL: "foo.bar@test.com"
+      STORAGE_BUCKET_NAME: "test"
+      STORAGE_REGION_NAME: "eu-central-1"
+      STORAGE_ENDPOINT: "http://minio:9000"
+      STORAGE_PATH: "certs"
+      ACCESS_KEY_FILE: "/run/secrets/access_key"
+      SECRET_KEY_FILE: "/run/secrets/secret_key"
+      CHALLENGE_TOKEN_FILE: "/run/secrets/token"
+      CERT_test: "test.com"
+    secrets:
+      - token
+      - access_key
+      - secret_key
+secrets:
+  token:
+    file: ./fake_secrets/token
+  access_key:
+    file: ./fake_secrets/access_key
+  secret_key:
+    file: ./fake_secrets/secret_key

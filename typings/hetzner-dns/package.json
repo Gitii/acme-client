@@ -1,0 +1,24 @@
+{
+    "name": "@types/hetzner-dns",
+    "version": "1.0.1",
+    "description": "Client for interacting with the Hetzner DNS API",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/J4Wx/node-hetzner-dns.git"
+    },
+    "bugs": {
+        "url": "https://github.com/J4Wx/node-hetzner-dns/issues"
+    },
+    "homepage": "https://github.com/J4Wx/node-hetzner-dns#readme",
+    "author": "Jamie Wood <jamie@cool.studio>",
+    "keywords": [
+        "Hetzner",
+        "DNS",
+        "API",
+        "Client"
+    ],
+    "scripts": {},
+    "types": "index.d.ts",
+    "dependencies": {}
+}

@@ -1,0 +1,28 @@
+{
+    "name": "@gitii/acme-dns-01-hetzner",
+    "version": "0.5.0",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "yarn tsc",
+        "lint": "yarn eslint",
+        "test": "jest"
+    },
+    "types": "dist/index.d.ts",
+    "dependencies": {
+        "@gitii/acme-client": "^0.5.0",
+        "debug": "^4.3.2",
+        "hetzner-dns": "^1.0.1",
+        "parse-domain": "^4.1.0",
+        "@types/debug": "^4.1.7",
+        "@types/hetzner-dns": "^1.0.1",
+        "@types/jest": "^27.0.2"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.15.8",
+        "@babel/preset-typescript": "^7.15.0",
+        "jest": "^27.3.1",
+        "ts-mockery": "^1.2.0",
+        "ts-node": "^10.4.0"
+    }
+}
